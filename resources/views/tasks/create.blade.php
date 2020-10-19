@@ -9,7 +9,7 @@
               登録画面
           </div>
           <div class="card-body">
-            if($errors->any())
+            @if($errors->any())
               <div class="alert alert-danger">
                 @foreach($errors->all() as $message)
                   <p>{{ $message }}</p>
