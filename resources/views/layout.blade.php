@@ -13,7 +13,15 @@
 </head>
 
 <body>
-  <h1>Hello, world!</h1>
+<header>
+  <nav class="my-navbar">
+    <a class="my-navbar-brand" href="next/">Next</a>
+  </nav>
+  <div class="container-fluid"></div>
+</header>
+<main>
+  @yield('content')
+</main>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
