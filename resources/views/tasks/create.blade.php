@@ -16,18 +16,30 @@
                 @endforeach
               </div>
             @endif
+
             <form action="/" method="POST">
               @csrf
+              
               <div class="form-group">
                 <label for="title" class="control-label">タイトル</label>
                 <input type="text" class="form-control" name="title">
               </div>
+
+              <div class="form-group">
+                <label for="status">状態</label>
+                <select name="status" class="form-control" id="status">
+                  {{-- ここに状態の処理を --}}
+                </select>
+              </div>
+
               <div class="form-group">
                 <label for="">詳細</label>
                 <input type="text" class="form-control" name="">
               </div>
+
               <button type="submit" class="btn btn-primary">登録</button>
             </form>
+            
           </div>
         </div>
       </div>
