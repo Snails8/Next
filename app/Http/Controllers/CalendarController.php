@@ -10,9 +10,10 @@ class CalendarController extends Controller
 {
     public function show(){
 		
+		//time()を使って現在時刻を渡し今月のカレンダーを用意
 		$calendar = new CalendarView(time());
-
-		return view('calendar', [
+		//Viewに作成したCalendarViewオブジェクトを渡す
+		return view('calendars.calendar', [
 			"calendar" => $calendar
 		]);
 	}

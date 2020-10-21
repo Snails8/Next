@@ -25,7 +25,7 @@ class CalendarView
     public function render()
     {
         $html = [];
-        $html = '<table class="table">';
+        $html[] = '<table class="table">';
         $html[] = '<thead>';
 		$html[] = '<tr>';
 		$html[] = '<th>月</th>';
