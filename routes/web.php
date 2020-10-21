@@ -15,4 +15,4 @@ Route::post('/next/create', [TaskController::class, 'create']);
 
 Route::get('/next/tasks/{id}/edit', [TaskController::class, 'edit']);
 
-Route::get('/calendar', [CalendarController::class, 'index']);
+Route::get('/calendar', [CalendarController::class, 'show']);
