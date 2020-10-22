@@ -29,7 +29,9 @@ class CalendarWeek
     public function getDays()
     {
         $days = [];
-
+        Carbon::setWeekStartsAt(Carbon::SUNDAY); // 週の最初を日曜日に設定
+        Carbon::setWeekEndsAt(Carbon::SATURDAY); // 週の最後を土曜日に設定
+      
         //Carbonを利用して、開始日〜終了日の作成
         $startDay = $this->carbon->copy()->startOfWeek();
         $lastDay = $this->carbon->copy()->endOfWeek();
