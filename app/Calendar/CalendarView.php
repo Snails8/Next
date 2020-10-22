@@ -42,4 +42,35 @@ class CalendarView
 		return implode("", $html);
     }
     
+    //getWeek関数は一ヶ月分の週カレンダーを用意した$weeksを返却することが目的
+    protected function getweeks()
+    {
+        $weeks = [];
+        //月の開始日と末尾を取得する処理。copy()を挟むことで日付操作をしても影響が出ないようにしている
+        $firstDay = $this->carbon->copy()->firstOfMonth();
+
+        $lastDay = $this->carbon->copy()->lastOfMonth();
+
+        //1周目、１日の指定をしてCalendarWeekの作成
+        $week = new CalendarWeek($firstDay->copy());
+        $weeks[] = $week;
+
+        //作業用の日
+        $tmpDay = $firstDay->copy()->addDay(7)->startOfWeek();
+
+        //月末までループ
+        while($tmpDay->lte($lastDay))
+        {
+            //週カレンダーViewの作成
+            //第2引数でcount($weeks)を指定
+            //何週目かを週カレンダーオブジェクトに伝えるために設置
+            $week = new CalendarWeek($tmpDay, count($weekds));
+            $weeks[] = $week
+
+            //次の週＋７日。$tmpDayを翌週に移動
+            $tmpDay->addDay(7);
+        }
+
+        return $weeks;
+    }
 }
