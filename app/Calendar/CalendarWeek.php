@@ -3,6 +3,8 @@
 namespace App\Calendar;
 
 use Carbon\Carbon;
+use App\Calender\CalendarWeekDay;
+use App\Calendar\CalendarWeekBlankDay;
 
 class CalendarWeek 
 {
@@ -16,7 +18,7 @@ class CalendarWeek
         $this->index = $index;
     }
 
-    public function getClassname()
+    public function getClassName()
     {
         return "week-" . $this->index;
     }
@@ -30,7 +32,7 @@ class CalendarWeek
 
         //Carbonを利用して、開始日〜終了日の作成
         $startDay = $this->carbon->copy()->startOfWeek();
-        $lastDay = $this->carbon->copy()->endOfWeek;
+        $lastDay = $this->carbon->copy()->endOfWeek();
 
         //作業用
         $tmpDay = $startDay->copy();
@@ -42,7 +44,7 @@ class CalendarWeek
             //月を比較して違う場合は前or後ろの余白なので処理を分ける
             if($tmpDay->month != $this->carbon->month)
             {
-                $day = new CalendarWeekBlankDay($tmpday->copy());
+                $day = new CalendarWeekBlankDay($tmpDay->copy());
                 $days[] =$day;
                 $tmpDay->addDay(1);
                 continue;

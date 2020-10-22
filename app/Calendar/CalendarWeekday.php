@@ -21,7 +21,7 @@ class CalendarWeekDay{
     }
 
     /**
-     * return
+     * @return
      */
     public function render()
     {

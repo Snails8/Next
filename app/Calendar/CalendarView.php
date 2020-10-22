@@ -2,6 +2,7 @@
 namespace App\Calendar;
 
 use Carbon\Carbon;
+use App\Calendar\CalendarWeek;
 
 class CalendarView 
 {
@@ -25,6 +26,7 @@ class CalendarView
     public function render()
     {
         $html = [];
+        $html[] = '<div class="calendar">'; 
         $html[] = '<table class="table">';
         $html[] = '<thead>';
 		$html[] = '<tr>';
@@ -36,7 +38,26 @@ class CalendarView
 		$html[] = '<th>土</th>';
         $html[] = '<th>日</th>';
 		$html[] = '</tr>';
-		$html[] = '</thead>';
+        $html[] = '</thead>';
+        
+        $html[] = '<tbody>';
+
+        $weeks = $this->getWeeks();
+        foreach($weeks as $week)
+        {
+            $html[] = '<tr class="'.$week->getClassName().'">';
+            $days = $week->getDays();
+            foreach($days as $day)
+            {
+                $html[] = '<td class="'.$day->getClassName().'">';
+                $html[] = $day->render();
+                $html[] = '</td>';
+            }
+            $html[] = '</tr>';
+        }
+
+        $html[] = '<tbody>';
+
 		$html[] = '</table>';
 		$html[] = '</div>';
 		return implode("", $html);
@@ -64,8 +85,8 @@ class CalendarView
             //週カレンダーViewの作成
             //第2引数でcount($weeks)を指定
             //何週目かを週カレンダーオブジェクトに伝えるために設置
-            $week = new CalendarWeek($tmpDay, count($weekds));
-            $weeks[] = $week
+            $week = new CalendarWeek($tmpDay, count($weeks));
+            $weeks[] = $week;
 
             //次の週＋７日。$tmpDayを翌週に移動
             $tmpDay->addDay(7);
