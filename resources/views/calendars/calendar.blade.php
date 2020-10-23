@@ -5,7 +5,14 @@
     <div class="row justify-content-center">
       <div class="col-md-10">
         <div class="card">
-          <div class="card-header">{{ $calendar->getTitle() }}</div>
+          <div class="card-header text-center">
+            <a class="btn btn-outline-secondary flat-left"
+                href="{{ url('/?date=' . $calendar->getPreviousMonth()) }}">前月へ</a>
+            <span>{{ $calendar->getTitle() }}</span>
+
+            <a class="btn btn-outline-secondary float-right"
+               href="{{ url('/?fdate=' . $calendar->getNextMonth()) }}">翌月へ</a>
+          </div>
           <div class="card-body">
               {!! $calendar->render() !!}
           </div>

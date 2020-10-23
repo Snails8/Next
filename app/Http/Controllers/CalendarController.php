@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Calendar\CalendarView;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Facade;
+use App\Calendar\Output\CalendarOutputView;
 
 class CalendarController extends Controller
 {
