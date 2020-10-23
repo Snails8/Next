@@ -28,7 +28,15 @@
               <div class="form-group">
                 <label for="status">状態</label>
                 <select name="status" class="form-control" id="status">
-                  {{-- ここに状態の処理を --}}
+                  @foreach(\App\Models\Calendar::STATUS as $key => $val)
+                    <option
+                        value="{{ $key }}"
+                        {{ $key == old('status', $task ?? ''->status) ? 'selected' : '' }}
+                    >
+                      {{ $val['label'] }}
+                    </option>
+                  @endforeach
+
                 </select>
               </div>
 
