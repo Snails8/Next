@@ -13,5 +13,5 @@ class Calendar extends Model
         1 => [ 'label' => '悪い', 'class' => 'label-danger' ],
         2 => [ 'label' => '普通', 'class' => 'label-info' ],
         3 => [ 'lable' => '良い', 'class' => '' ],
-    ]
+    ];
 }
