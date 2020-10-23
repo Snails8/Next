@@ -10,7 +10,7 @@
                 href="{{ url('/?date=' . $calendar->getPreviousMonth()) }}">前月へ</a>
             <span>{{ $calendar->getTitle() }}</span>
 
-            <a class="btn btn-outline-secondary float-right"
+            <a class="btn btn-outline-secondary flat-right"
                href="{{ url('/?fdate=' . $calendar->getNextMonth()) }}">翌月へ</a>
           </div>
           <div class="card-body">
