@@ -3,20 +3,26 @@
 @section('content')
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-10">
+      <div class="col-md-12">
+        
+        <div class="btn">
+          <a class="btn btn-outline-secondary"
+             href="/next/create">
+              今日は何をしたの？
+          </a>
+        </div>
+      
         <div class="card">
           <div class="card-header text-center">
-            <a class="btn btn-outline-secondary flat-left"
-                href="{{ url('/?date=' . $calendar->getPreviousMonth()) }}">先月へ</a>
-            <span>{{ $calendar->getTitle() }}</span>
-
-            <a class="btn btn-outline-secondary flat-right"
-               href="{{ url('/?fdate=' . $calendar->getNextMonth()) }}">翌月へ</a>
+            <a href="{{ url('/?date=' . $calendar->getPreviousMonth()) }}">&lt;</a>
+              <span>{{ $calendar->getTitle() }}</span>
+            <a href="{{ url('/?fdate=' . $calendar->getNextMonth()) }}">&gt;</a>
           </div>
           <div class="card-body">
               {!! $calendar->render() !!}
           </div>
         </div>
+
       </div>
     </div>
   </div>

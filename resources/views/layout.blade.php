@@ -17,7 +17,7 @@
 <body>
 <header>
   <nav class="my-navbar">
-    <a class="my-navbar-brand" href="next/">Next</a>
+    <a class="my-navbar-brand" href="/calendar">Next</a>
   </nav>
   <div class="container-fluid"></div>
 </header>
