@@ -7,7 +7,7 @@
         <div class="card">
           <div class="card-header text-center">
             <a class="btn btn-outline-secondary flat-left"
-                href="{{ url('/?date=' . $calendar->getPreviousMonth()) }}">前月へ</a>
+                href="{{ url('/?date=' . $calendar->getPreviousMonth()) }}">先月へ</a>
             <span>{{ $calendar->getTitle() }}</span>
 
             <a class="btn btn-outline-secondary flat-right"
