@@ -8,10 +8,24 @@ body {
 
 .my-navbar {
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: #333;
     display: flex;
     height: 4rem;
     justify-content: space-between;
     padding: 0 2%;
     margin-bottom: 1cm;
+}
+
+.my-navbar-brand {
+    font-size: 18px;
+}
+
+.my-navbar-brand,
+.my-navbar-item {
+    color: #8c8c8c;
+}
+
+.my-navbar-brand:hover,
+a.my-navbar-item:hover {
+  color: #ffffff;
 }
