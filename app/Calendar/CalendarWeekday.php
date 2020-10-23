@@ -3,6 +3,7 @@
 namespace App\Calender;
 
 use Carbon\Carbon;
+use Yasumi\Yasumi;
 
 class CalendarWeekDay{
 
@@ -28,5 +29,20 @@ class CalendarWeekDay{
         //format()関数に「j」を指定すると先頭にゼロをつけない日付けを取得できる
         //ex)15日の場合<p class="day">15</p>というHTMLを返す
         return '<p class="day">' . $this->carbon->format("j"). '</p>';
+    }
+}
+
+class HolidaySetting
+{
+    private $holidays = null;
+
+    public function loadHoliday($year)
+    {
+        $this->holidays = Yasumi::create("Japan", $year, "ja_JP");
+    }
+    public function isHoliday($date)
+    {
+        if(!$this->holidays)return false;
+        return $this->holidays->isHoliday($date);
     }
 }

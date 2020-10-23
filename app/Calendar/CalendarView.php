@@ -3,6 +3,7 @@ namespace App\Calendar;
 
 use Carbon\Carbon;
 use App\Calendar\CalendarWeek;
+use App\Calender\CalendarWeekDay;
 
 class CalendarView 
 {
@@ -25,6 +26,7 @@ class CalendarView
     // カレンダーを出力する
     public function render()
     {
+
         $html = [];
         $html[] = '<div class="calendar">'; 
         $html[] = '<table class="table">';
