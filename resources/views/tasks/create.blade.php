@@ -17,7 +17,7 @@
               </div>
             @endif
 
-            <form action="/" method="POST">
+            <form action="/calendar" method="POST">
               @csrf
               
               <div class="form-group">
