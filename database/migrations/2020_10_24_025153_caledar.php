@@ -15,7 +15,7 @@ class Caledar extends Migration
     {
         Schema::create('tasks',function (Blueprint $table) {
             $table->increments('id');
-            $table->date('');
+            $table->date('created_at');
             $table->string('title', 100);
             $table->integer('status');
             $table->timestamps();
@@ -29,6 +29,6 @@ class Caledar extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('');
+        Schema::dropIfExists('calendar');
     }
 }
