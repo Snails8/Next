@@ -10,7 +10,7 @@ Route::get('/', function(){
 
 Route::get('/next', [TaskController::class, '']);
 
-Route::get('/next/create', [TaskController::class, 'ShowCreateForm']);
+Route::get('/next/create', [TaskController::class, 'showCreateForm']);
 Route::post('/next/create', [TaskController::class, 'create']);
 
 Route::get('/next/tasks/{id}/edit', [TaskController::class, 'edit']);

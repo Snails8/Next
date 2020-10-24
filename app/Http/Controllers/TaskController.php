@@ -4,27 +4,30 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Calender\Calender;
+use App\Models\Task;
 
 class TaskController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('layout');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function showCreateForm()
     {
         return view('tasks.create');
+
+    }
+
+    public function create()
+    {
+        $task = new Task();
+
+        $task->title = $request->title;
+
+        $task->save();
+
+        return redirect()->route('calendars.calendar');
     }
 
     /**
