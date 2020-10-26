@@ -6,6 +6,9 @@ use Carbon\Carbon;
 use App\Calender\CalendarWeekDay;
 use App\Calendar\CalendarWeekBlankDay;
 
+/**
+ * 週を出力するためのクラス
+ */
 class CalendarWeek 
 {
 

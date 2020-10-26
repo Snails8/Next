@@ -5,6 +5,9 @@ namespace App\Calender;
 use Carbon\Carbon;
 use Yasumi\Yasumi;
 
+/**
+ * 日を出力するためのクラス
+ */
 class CalendarWeekDay{
 
     protected $carbon;
