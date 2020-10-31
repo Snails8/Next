@@ -37,8 +37,8 @@
               </div>
 
               <div class="form-group">
-                <label for="">詳細</label>
-                <input type="text" class="form-control" name="">
+                <label for="message">詳細</label>
+                <textarea name="message" class="form-control" rows="8" cols="80" id="message"></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary">登録</button>
