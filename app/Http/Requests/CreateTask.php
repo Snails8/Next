@@ -24,7 +24,25 @@ class CreateTask extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|max:20',
+            'status' => 'required',
+            'message' => 'required|max:1000',
         ];
     }
+    public function attributes()
+    {
+        return [
+            'title' => 'タイトル',
+            'status' => '状態',
+            'message' => '詳細',
+        ];
+    }
+    public function messages()
+    {
+        return [
+
+        ];
+    }
+
+
 }
