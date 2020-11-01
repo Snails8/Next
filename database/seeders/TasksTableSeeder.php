@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class TasksTableSeeder extends Seeder
 {
@@ -14,9 +16,13 @@ class TasksTableSeeder extends Seeder
     public function run()
     {
         DB::table('tasks')->insert([
+            'active_day' => Carbon::now(),
             'title' => "サンプルタスク",
-            'status' => 
-            'message' => "うまくいったか？",
+            'status' => $num,
+            'description' => "うまくいったか？",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+ 
         ]);
     }
 }
