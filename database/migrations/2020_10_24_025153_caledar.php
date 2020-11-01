@@ -15,10 +15,10 @@ class Caledar extends Migration
     {
         Schema::create('tasks',function (Blueprint $table) {
             $table->increments('id');
-            $table->date('day');
+            $table->date('active_day');
             $table->string('title', 100);
             $table->integer('status');
-            $table->string('description');
+            $table->string('description',2000);
             $table->timestamps();
         });
     }
