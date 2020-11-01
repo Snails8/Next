@@ -15,14 +15,16 @@ class TasksTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tasks')->insert([
-            'active_day' => Carbon::now(),
-            'title' => "サンプルタスク",
-            'status' => $num,
-            'description' => "うまくいったか？",
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
- 
-        ]);
+        foreach (range(1, 3) as $num) {
+            DB::table('tasks')->insert([
+                'active_day' => Carbon::now(),
+                'title' => "サンプルタスク",
+                'status' => $num,
+                'description' => "うまくいったか？",
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        }
+        
     }
 }
