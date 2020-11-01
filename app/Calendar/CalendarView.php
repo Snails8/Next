@@ -69,7 +69,7 @@ class CalendarView
     protected function getweeks()
     {
         $weeks = [];
-        //月の開始日と末尾を取得する処理。copy()を挟むことで日付操作をしても影響が出ないようにしている
+        
         $firstDay = $this->carbon->copy()->firstOfMonth();
 
         $lastDay = $this->carbon->copy()->lastOfMonth();
