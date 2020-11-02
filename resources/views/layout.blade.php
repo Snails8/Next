@@ -25,7 +25,9 @@
   @yield('content')
 </main>
 <footer>
-  <p>© All rights reserved by Tanishi.</p>
+  <nav class="my-navbar-footer">
+    © All rights reserved by Tanishi.
+  </nav>
 </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

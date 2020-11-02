@@ -29,3 +29,7 @@ body {
 a.my-navbar-item:hover {
   color: #ffffff;
 }
+
+.my-navbar-footer {
+    text-align: center;
+}
