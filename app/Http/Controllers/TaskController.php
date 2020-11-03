@@ -19,7 +19,7 @@ class TaskController extends Controller
         return view('tasks.create');
 
     }
-
+    
     public function create(CreateTask $request)
     {
         $task = new Task();
@@ -32,16 +32,17 @@ class TaskController extends Controller
 
         return redirect()->route('calendars.calendar');
     }
-
+　　 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * formからの遷移先（作成の実行）
      */
-    public function store(Request $request)
+    function store(Request $request)
     {
-        //
+        $validatedDate = $request->validate($this->validationRules);
+
+        $new = Task::create($validatedDate);
+
+        return redirect()->route("/");
     }
 
     /**
