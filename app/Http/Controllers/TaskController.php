@@ -34,7 +34,7 @@ class TaskController extends Controller
     }
 　　 
     /**
-     * formからの遷移先（作成の実行）
+     * 登録処理：formからの遷移先（作成の実行）
      */
     function store(Request $request)
     {
