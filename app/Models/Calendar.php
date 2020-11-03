@@ -9,9 +9,14 @@ class Calendar extends Model
 {
     use HasFactory;
 
-    protected $table = "";
+    protected $table = "tasks";
 
-    protected $fillable = [];
+    protected $fillable = [
+        'title',
+        'status',
+        'description',
+        
+    ];
 
     const STATUS = [
         1 => [ 'label' => '悪い', 'class' => 'label-danger' ],
