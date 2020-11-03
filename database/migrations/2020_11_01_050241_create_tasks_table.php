@@ -19,7 +19,7 @@ class CreateTasksTable extends Migration
             $table->date('active_day');
             $table->string('title', 100);
             $table->integer('status');
-            $table->string('description',2000);
+            $table->text('description',2000);
             $table->timestamps();
           
         });
