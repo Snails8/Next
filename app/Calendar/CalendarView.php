@@ -5,19 +5,19 @@ use Carbon\Carbon;
 use App\Calendar\CalendarWeek;
 use App\Calender\CalendarWeekDay;
 
+/**
+ * カレンダーを出力するためのクラス
+ */
 class CalendarView 
 {
     private $carbon;
 
     public function __construct($date)
     {
-        // コンストラクタで受け取った日付を元に
-        // Carbonオブジェクトを作成
         $this->carbon = new Carbon($date);
-
     }
 
-    // タイトル
+    // タイトルの出力
     public function getTitle()
     {
         return $this->carbon->format('Y年n月');
@@ -81,7 +81,7 @@ class CalendarView
         $week = new CalendarWeek($firstDay->copy());
         $weeks[] = $week;
 
-        //作業用の日
+        //作業用の日。1w後週の開始日に移動
         $tmpDay = $firstDay->copy()->addDay(7)->startOfWeek();
 
         //月末までループ

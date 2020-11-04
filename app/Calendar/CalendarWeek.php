@@ -25,10 +25,10 @@ class CalendarWeek
     {
         return "week-" . $this->index;
     }
+    
     /**
      * @return CalendarWeekDay[]
      */
-
     public function getDays()
     {
         $days = [];
