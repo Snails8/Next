@@ -65,7 +65,7 @@ class CalendarView
 		return implode("", $html);
     }
     
-    //getWeek関数は一ヶ月分の週カレンダーを用意した$weeksを返却することが目的
+    //一ヶ月分の週カレンダーを用意した$weeksを返却することが目的
     protected function getweeks()
     {
         $weeks = [];
@@ -87,7 +87,6 @@ class CalendarView
         //月末までループ
         while($tmpDay->lte($lastDay))
         {
-            //週カレンダーViewの作成
             //第2引数でcount($weeks)を指定
             //何週目かを週カレンダーオブジェクトに伝えるために設置
             $week = new CalendarWeek($tmpDay, count($weeks));
