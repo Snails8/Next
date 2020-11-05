@@ -17,7 +17,6 @@ class TaskController extends Controller
     public function showCreateForm()
     {
         return view('tasks.create');
-
     }
     
     public function create(CreateTask $request)
@@ -32,11 +31,10 @@ class TaskController extends Controller
 
         return redirect()->route('calendars.calendar');
     }
-　　 
     /**
-     * 登録処理：formからの遷移先（作成の実行）
+     * form遷移処理
      */
-    function store(Request $request)
+    public function store(Request $request)
     {
         $validatedDate = $request->validate($this->validationRules);
 

@@ -10,7 +10,7 @@ use App\Calender\CalendarWeekDay;
  */
 class CalendarView 
 {
-    private $carbon;
+    protected $carbon;
 
     public function __construct($date)
     {
