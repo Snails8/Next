@@ -34,18 +34,3 @@ class CalendarWeekDay{
         return '<p class="day">' . $this->carbon->format("j"). '</p>';
     }
 }
-
-class HolidaySetting
-{
-    private $holidays = null;
-
-    public function loadHoliday($year)
-    {
-        $this->holidays = Yasumi::create("Japan", $year, "ja_JP");
-    }
-    public function isHoliday($date)
-    {
-        if(!$this->holidays)return false;
-        return $this->holidays->isHoliday($date);
-    }
-}
