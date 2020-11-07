@@ -80,9 +80,8 @@ class CalendarView
 
         $lastDay = $this->carbon->copy()->lastOfMonth();
 
-        //1周目、１日の指定をしてCalendarWeekの作成
-        $week = new CalendarWeek($firstDay->copy());
-        $weeks[] = $week;
+        //1周目
+        $week[] = $this->getWeek($firstDay);
 
         //作業用の日。1w後週の開始日に移動
         $tmpDay = $firstDay->copy()->addDay(7)->startOfWeek();
@@ -90,16 +89,17 @@ class CalendarView
         //月末までループ
         while($tmpDay->lte($lastDay))
         {
-            //第2引数でcount($weeks)を指定
-            //何週目かを週カレンダーオブジェクトに伝えるために設置
-            $week = new CalendarWeek($tmpDay, count($weeks));
-            $weeks[] = $week;
-
-            //次の週＋７日。$tmpDayを翌週に移動
+            $weeks[] = $this->getWeek($tmpDay->copy(), count($weeks));
+            //次の週=＋７日
             $tmpDay->addDay(7);
         }
 
         return $weeks;
+    }
+
+    protected function getweek(Carbon $date, $index = 0)
+    {
+        return new CalendarWeek($date, $index);
     }
 
     public function getNextMonth()
