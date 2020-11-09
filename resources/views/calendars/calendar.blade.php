@@ -18,6 +18,7 @@
               <span>{{ $calendar->getTitle() }}</span>
             <a href="{{ url('/?fdate=' . $calendar->getNextMonth()) }}">&gt;</a>
           </div>
+    
           <div class="card-body">
               {!! $calendar->render() !!}
           </div>
