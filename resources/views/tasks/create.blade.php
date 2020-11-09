@@ -17,7 +17,7 @@
               </div>
             @endif
 
-            <form action="/calendar" method="POST">
+            <form action="{{ route('store_task') }}" method="POST">
               @csrf
               
               <div class="form-group">
