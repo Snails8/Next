@@ -26,7 +26,7 @@ class CalendarController extends Controller
 		if(!$date)$date = time();
 		
 		//time()を使って現在時刻を渡し今月のカレンダーを用意
-		$calendar = new CalendarOutputView($date());
+		$calendar = new CalendarOutputView($time());
 		//Viewに作成したCalendarViewオブジェクトを渡す
 		return view('calendars.calendar', [
 			"calendar" => $calendar

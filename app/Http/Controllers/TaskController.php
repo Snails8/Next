@@ -40,7 +40,7 @@ class TaskController extends Controller
 
         $new = Task::create($validatedDate);
 
-        return redirect()->route("/");
+        return redirect()->route("/calendar");
     }
 
     /**
