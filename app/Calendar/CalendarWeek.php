@@ -54,14 +54,23 @@ class CalendarWeek
             }
 
             //今月
-            $day = new CalendarWeekDay($tmpDay->copy());
-            $days[] = $day;
+            $days[] = $this->getDay($tmpDay->copy(), $setting);
             //翌月に移動
             $tmpDay->addDay(1);
         }
 
         return $days;
 
+    }
+
+    /**
+     * @return CalendarWeekday
+     */
+    public function getDay(Carbon $date, HolidaySetting $setting)
+    {
+        $day = new CalendarWeekDay($date);
+        $day->checkHoliday($setting);
+        return $day;
     }
 
 }

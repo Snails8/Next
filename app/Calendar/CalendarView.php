@@ -81,7 +81,7 @@ class CalendarView
         $lastDay = $this->carbon->copy()->lastOfMonth();
 
         //1周目
-        $week[] = $this->getWeek($firstDay);
+        $weeks[] = $this->getWeek($firstDay);
 
         //作業用の日。1w後週の開始日に移動
         $tmpDay = $firstDay->copy()->addDay(7)->startOfWeek();
