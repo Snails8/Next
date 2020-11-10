@@ -26,9 +26,7 @@ class CalendarView
     // カレンダーを出力する
     public function render()
     {
-        //祝日データの読み取り
-        $setting = HolidaySetting::firstOrNew();
-        $setting->loadHoliday($this->carbon->format("Y"));   
+           
 
         $html = [];
         $html[] = '<div class="calendar">'; 
