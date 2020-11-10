@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\TaskCreateController;
 use App\Http\Controllers\CalendarController;
 
 Route::get('/', function(){
@@ -9,9 +10,11 @@ Route::get('/', function(){
 });
 
 Route::get('/next', [TaskController::class, '']);
-
-Route::get('/next/create', [TaskController::class, 'showCreateForm']);
-Route::post('/next/create', [TaskController::class, 'store'])->name("store_task");
+/**
+ * form遷移処理
+ */
+Route::get('/next/create', [TaskCreateController::class, 'showCreateForm']);
+Route::post('/next/create', [TaskCreateController::class, 'store'])->name("store_task");
 
 Route::get('/next/tasks/{id}/edit', [TaskController::class, 'edit']);
 
