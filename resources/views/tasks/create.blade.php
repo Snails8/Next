@@ -28,11 +28,9 @@
               <div class="form-group">
                 <label for="status">状態</label>
                 <select name="status" class="form-control" id="status">
-                  @foreach(\App\Models\Task::STATUS as $key => $val)
-                    
-                    </option>
-                  @endforeach
-
+                  <option value="良い">良い</option>
+                  <option value="普通">普通</option>
+                  <option value="悪い">悪い</option>
                 </select>
               </div>
 
