@@ -13,14 +13,6 @@ class TaskController extends Controller
     {
         return view('layout');
     }
-    /**
-     * カレンダー表示処理
-     */
-
-    public function showCreateForm()
-    {
-        return view('tasks.create');
-    }
     
     public function create(CreateTask $request)
     {
@@ -34,18 +26,6 @@ class TaskController extends Controller
 
         return redirect()->route('calendars.calendar');
     }
-    /**
-     * form遷移処理
-     */
-    public function store(Request $request)
-    {
-        $validatedDate = $request->validate($this->validationRules);
-
-        $new = Task::create($validatedDate);
-
-        return redirect()->route("/calendar");
-    }
-
     /**
      * Display the specified resource.
      *
