@@ -8,6 +8,14 @@ use App\Models\Task;
 class TaskCreateController extends Controller
 {
     /**
+     * バリデーションルール
+     */
+    protected $validationRules = [
+        "title" => ["required", "string"],
+        "status" => ["required", "integer"],
+        "description" => ["required", "text"], 
+    ];
+    /**
      * form表示処理
      */
     public function showCreateForm()
@@ -19,10 +27,13 @@ class TaskCreateController extends Controller
      */
     public function store(Request $request)
     {
+        //入力値受け取り
         $validatedDate = $request->validate($this->validationRules);
 
+        //Taskの保存
         $new = Task::create($validatedDate);
 
-        return redirect()->route("/calendar");
+        return redirect()
+          ->route("/calendar");
     }
 }
