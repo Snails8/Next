@@ -29,8 +29,10 @@ class CalendarWeekDay{
      */
     public function render()
     {
+        $html = [];
         //format()関数に「j」を指定すると先頭にゼロをつけない日付けを取得できる
-        //ex)15日の場合<p class="day">15</p>というHTMLを返す
-        return '<p class="day">' . $this->carbon->format("j"). '</p>';
+        $html[] = '<p class="day">' . $this->carbon->format("j"). '</p>';
+
+        return implode("", $html);
     }
 }
