@@ -30,7 +30,7 @@ class CalendarWeekDay{
     public function render()
     {
         $html = [];
-        //format()関数に「j」を指定すると先頭にゼロをつけない日付けを取得できる
+        //日付：format()関数に「j」を指定すると先頭にゼロをつけない日付けを取得できる
         $html[] = '<p class="day">' . $this->carbon->format("j"). '</p>';
 
         return implode("", $html);
