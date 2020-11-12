@@ -9,18 +9,6 @@ use App\Http\Requests\CreateTask;
 
 class TaskController extends Controller
 {   
-    public function create(CreateTask $request)
-    {
-        $task = new Task();
-
-        $task->title = $request->title;
-        $task->status = $request->status;
-        $task->message = $request->messages;
-
-        $task->save();
-
-        return redirect()->route('calendars.calendar');
-    }
     /**
      * 詳細表示機能
      */
@@ -31,5 +19,22 @@ class TaskController extends Controller
         return view('tasks.show',[
             "task" => $task
         ]);
+    }
+    /**
+     * 編集画面
+     */
+    public function form(Request $request, $id)
+    {
+        $task = Task::find($id);
+
+        if(!$task){
+            return back()->withError("編集できないよ");
+        }
+        //自分以外を編集
+        if(false == $this->isEditable($task)){
+            return back()->withError("編集できないよ");
+        }
+
+        return view("tasks.task_edit",["task => $task"]);
     }
 }
