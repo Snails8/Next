@@ -39,7 +39,7 @@
                 <textarea name="message" class="form-control" rows="8" cols="80" id="message"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary">登録</button>
+              <button type="submit" value="登録" class="btn btn-primary">登録</button>
             </form>
             
           </div>
