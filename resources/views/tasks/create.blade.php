@@ -22,7 +22,7 @@
               
               <div class="form-group">
                 <label for="title" class="control-label">タイトル</label>
-                <input type="text" class="form-control" name="title">
+                <input type="text" class="form-control" name="title" id="title">
               </div>
 
               <div class="form-group">
