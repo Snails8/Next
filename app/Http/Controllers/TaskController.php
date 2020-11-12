@@ -22,12 +22,9 @@ class TaskController extends Controller
         return redirect()->route('calendars.calendar');
     }
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * 詳細表示機能
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $calendar = Task::find($id);
 

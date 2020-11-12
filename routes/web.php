@@ -15,7 +15,10 @@ Route::get('/next', [TaskController::class, '']);
  */
 Route::get('/next/create', [TaskCreateController::class, 'showCreateForm']);
 Route::post('/next/create', [TaskCreateController::class, 'store'])->name("store_task");
-
+/**
+ * 詳細表示機能
+ */
+Route::get('/next/tasks/{id}', [TaskController::class, 'show']);
 Route::get('/next/tasks/{id}/edit', [TaskController::class, 'edit']);
 
 Route::get('/calendar', [CalendarController::class, 'show']);
