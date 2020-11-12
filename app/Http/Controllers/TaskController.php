@@ -15,6 +15,10 @@ class TaskController extends Controller
     public function show(Request $request, $id)
     {
         $task = Task::find($id);
+        // idがおかしいor不正の場合の処理
+        if(!$task){
+            return back()->withError("編集できないよ");
+        }
 
         return view('tasks.show',[
             "task" => $task
