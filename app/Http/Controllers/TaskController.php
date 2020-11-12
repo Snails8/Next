@@ -26,8 +26,10 @@ class TaskController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $calendar = Task::find($id);
+        $task = Task::find($id);
 
-        return view('tasks.show', compact('carendar'));
+        return view('tasks.show',[
+            "task" => $task
+        ]);
     }
 }

@@ -10,7 +10,6 @@
           </div>
 
           <div class="card-body">
-            @foreach($tasks as $task)
               <tr>
                   <td>{{ $task->title }}</td>
                   <td>
@@ -18,7 +17,7 @@
                   </td>
                   <td>{{ $task->description }}</td>
               </tr>
-            @endforeach
+            
           </div>
         </div>
       </div>
