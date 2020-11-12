@@ -3,20 +3,33 @@
 @section('content')
   <div class="container">
     <div class="row">
-      <div class="col col-md-offset-3 col-md-6">
+      <div class="col-12">
         <div class="card">
           <div class="card-header">
               詳細
           </div>
 
           <div class="card-body">
-              <tr>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>タイトル</th>
                   <td>{{ $task->title }}</td>
+                </tr>
+                <tr>
                   <td>
-                    <span class="label">{{ $task->$status }}</span>
+                    <th>状態</th>
+                    <span class="label">{{ $task->$status ?? '' }}</span>
                   </td>
+                </tr>
+                <tr>
+                  <th>詳細</th>
                   <td>{{ $task->description }}</td>
-              </tr>
+                </tr> 
+              </tbody> 
+            </table>
+            
+            <a href="{{ url('calendar') }}" class="btn btn-info">戻る</a>
             
           </div>
         </div>
