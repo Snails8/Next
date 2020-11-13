@@ -34,6 +34,7 @@ class TaskCreateController extends Controller
         $new = Task::create($validatedDate);
 
         return redirect()
-          ->route("/calendar");
+          ->route("/calendar")
+          ->withStatus("保存したぜ");
     }
 }
