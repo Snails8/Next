@@ -12,7 +12,7 @@ class TaskCreateController extends Controller
      */
     protected $validationRules = [
         "title" => ["required", "string"],
-        "status" => ["required", "integer"],
+        "status" => ["required", "string"],
         "description" => ["required", "text"], 
     ];
     /**
