@@ -18,7 +18,7 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->string("date_key", 8);
             $table->string('title', 100);
-            $table->integer('status');
+            $table->string('status');
             $table->text('description',2000);
             $table->timestamps();
           
