@@ -8,8 +8,10 @@ use App\Http\Controllers\CalendarController;
 Route::get('/', function(){
     return view('welcome');
 });
-
-Route::get('/next', [TaskController::class, '']);
+/**
+ * カレンダー一覧表示
+ */
+Route::get('/next', [CalendarController::class, 'show']);
 /**
  * form遷移処理
  */
@@ -20,5 +22,3 @@ Route::post('/next/create', [TaskCreateController::class, 'store'])->name("store
  */
 Route::get('/next/tasks/{id}', [TaskController::class, 'show']);
 Route::get('/next/tasks/{id}/edit', [TaskController::class, 'edit']);
-
-Route::get('/calendar', [CalendarController::class, 'show']);
