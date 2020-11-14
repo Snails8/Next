@@ -13,9 +13,9 @@ class Task extends Model
 
     protected $fillable = [
         'title',
+        'date_key',
         'status',
         'description',
-        
     ];
 
     const STATUS = [
