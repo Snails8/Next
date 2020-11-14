@@ -13,7 +13,7 @@ class CalendarController extends Controller
 	{
 		//クエリーのdate
 		$date = $request->input("date");
-
+        //dateがYYYY-MM形式か判定
 		if($date && preg_match("/^[0-9]{4}-[0-9]{2}$/", $date))
 		{
 			$date = strtotime($date . "-01");
