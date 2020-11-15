@@ -19,7 +19,7 @@ class CreateTasksTable extends Migration
             $table->string("date_key", 8)->format('Ymd')->nullable();
             $table->string('title', 100);
             $table->string('status');
-            $table->text('description',2000)->nullable();
+            $table->string('description',2000)->nullable();
             $table->timestamps();
           
         });
