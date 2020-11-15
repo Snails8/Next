@@ -11,7 +11,7 @@ Route::get('/', function(){
 /**
  * カレンダー一覧表示
  */
-Route::get('/next', [CalendarController::class, 'show']);
+Route::get('/next', [CalendarController::class, 'show'])->name("calendar");
 /**
  * form遷移処理
  */
