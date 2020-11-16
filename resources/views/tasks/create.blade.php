@@ -21,6 +21,11 @@
               @csrf
               
               <div class="form-group">
+                <label for="date_key">[Ymd]</label>
+                <input type="hidden" name="date_key" class="form-control" id="date_key">
+              </div>
+              
+              <div class="form-group">
                 <label for="title" class="control-label">タイトル</label>
                 <input type="text" class="form-control" name="title" id="title">
               </div>
