@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Calendar\CalendarView;
 
 class TaskCreateController extends Controller
 {
@@ -20,7 +21,9 @@ class TaskCreateController extends Controller
      */
     public function showCreateForm()
     {
-        return view('tasks.create');
+        $calendar = new CalendarView(time());
+
+        return view('tasks.create', [ "calendar" => $calendar ]);
     }
     /**
      * form遷移処理

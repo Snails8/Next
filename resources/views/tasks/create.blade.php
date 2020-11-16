@@ -21,7 +21,7 @@
               @csrf
               
               <div class="form-group">
-                <label for="date_key">[Ymd]</label>
+                <label for="date_key">{{ $calendar->getCreateTitle() }}</label>
                 <input type="hidden" name="date_key" class="form-control" id="date_key">
               </div>
               

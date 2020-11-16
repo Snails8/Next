@@ -22,6 +22,11 @@ class CalendarView
     {
         return $this->carbon->format('Y年n月');
     }
+    // create画面のgetCreateTitle
+    public function getCreateTitle()
+    {
+        return $this->carbon->format('Y年n月d日');
+    }
 
     // カレンダーを出力する
     public function render()
