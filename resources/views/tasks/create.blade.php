@@ -6,7 +6,7 @@
       <div class="col col-md-offset-3 col-md-6">
         <div class="card">
           <div class="card-header">
-              登録画面
+              登録画面 {{ $calendar->getCreateTitle() }}
           </div>
           <div class="card-body">
             @if($errors->any())
@@ -21,8 +21,9 @@
               @csrf
               
               <div class="form-group">
-                <label for="date_key">{{ $calendar->getCreateTitle() }}</label>
-                <input type="hidden" name="date_key" class="form-control" id="date_key">
+                <label for="date_key"></label>
+                <input type="hidden" name="date_key" class="form-control" id="date_key"
+                       value="{{ $calendar->getCreateFormDate() }}">
               </div>
               
               <div class="form-group">
