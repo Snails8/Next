@@ -34,6 +34,14 @@ class CalendarWeekDay{
         $html[] = '<p class="day">' . $this->carbon->format("j"). '</p>';
         $html[] = '<a href="/next/tasks/{1}">ココ！</a>';
 
+        if ("aならば")
+        {
+            "Bを実行";
+        }else
+        {
+            $html[] = '';
+        }
+
         return implode("", $html);
     }
 }
