@@ -36,7 +36,7 @@ class CalendarWeekDay{
         $html[] = '<p class="day">' . $this->carbon->format("j"). '</p>';
         $html[] = '<a href="/next/tasks/{1}">ココ！</a>';
 
-        if ("aならば")
+        if ("$date === Task::where()")
         {
             "Bを実行";
         }else
