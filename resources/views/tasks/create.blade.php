@@ -19,10 +19,10 @@
 
             <form action="{{ route('store_task') }}" method="POST">
               @csrf
-              
-              <div class="form-group">
-                <label for="date_key"></label>
-                <input type="hidden" name="date_key" class="form-control" id="date_key"
+
+              <div class="form-group"> 
+                <label for="active_date">日付</label>
+                <input type="hidden" name="active_date" class="form-control" id="active_date"
                        value="{{ $calendar->getCreateFormDate() }}">
               </div>
               
