@@ -17,9 +17,9 @@ class TasksTableSeeder extends Seeder
     {
         foreach (range(1, 3) as $num) {
             DB::table('tasks')->insert([
-                'date_key' => Carbon::now()->format('Ymd'),
+                'active_date' => Carbon::now()->format('Ymd'),
                 'title' => "サンプル",
-                'status' => $num,
+                'status' => "悪い",
                 'description' => "うまくいったか？",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
