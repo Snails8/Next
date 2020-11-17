@@ -12,6 +12,7 @@ class TaskCreateController extends Controller
      * バリデーションルール
      */
     protected $validationRules = [
+        "active_date" => ["required", "date"],
         "title" => ["required", "string"],
         "status" => ["required", "string"],
         "description" => ["nullable", "string"], 
