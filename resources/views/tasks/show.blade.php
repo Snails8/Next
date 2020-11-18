@@ -23,7 +23,7 @@
                 <tr>
                   <td>
                     <th>状態</th>
-                    <span class="label {{ $task->status_class }}">{{ $task->$status_label }}</span>
+                    <span class="label">{{ $task->status }}</span>
                   </td>
                 </tr>
                 <tr>
