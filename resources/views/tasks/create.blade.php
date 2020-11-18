@@ -47,6 +47,7 @@
               <button type="submit" value="登録" class="btn btn-primary">登録</button>
             </form>
             
+            <a href="{{ route('calendar') }}" class="btn btn-info">戻る</a>
           </div>
         </div>
       </div>
