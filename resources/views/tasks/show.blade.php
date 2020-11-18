@@ -21,9 +21,8 @@
                   <td>{{ $task->title }}</td>
                 </tr>
                 <tr>
-                  <td>
                     <th>状態</th>
-                    <span class="label">{{ $task->status }}</span>
+                    <td>{{ $task->status }}</td>
                   </td>
                 </tr>
                 <tr>
