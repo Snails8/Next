@@ -33,7 +33,7 @@
               </tbody> 
             </table>
             
-            <a href="{{ url('calendar') }}" class="btn btn-info">戻る</a>
+            <a href="{{ route('calendar') }}" class="btn btn-info">戻る</a>
             
           </div>
         </div>
