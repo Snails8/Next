@@ -13,10 +13,12 @@ class Task extends Model
 
     protected $fillable = [
         'title',
-        "date",
+        "active_date",
         'status',
         'description',
     ];
+
+    
 
     const STATUS = [
         1 => [ 'label' => '悪い', 'class' => 'label-danger' ],

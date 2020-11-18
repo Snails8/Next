@@ -22,7 +22,7 @@
 
               <div class="form-group"> 
                 <label for="active_date" class="control-label">日付</label>
-                <input type="hidden" name="active_date" class="form-control" id="active_date" value="{{ $calendar->getCreateFormDate() }}">
+                <input type="text" name="active_date" class="form-control" id="active_date" value="{{ $calendar->getCreateFormDate() }}">
               </div>
               
               <div class="form-group">
