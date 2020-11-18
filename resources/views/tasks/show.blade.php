@@ -13,6 +13,10 @@
             <table class="table">
               <tbody>
                 <tr>
+                  <th>日付</th>
+                  <td>{{ $task->active_date }}</td>
+                </tr>
+                <tr>
                   <th>タイトル</th>
                   <td>{{ $task->title }}</td>
                 </tr>
