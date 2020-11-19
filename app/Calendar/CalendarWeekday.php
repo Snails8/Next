@@ -41,7 +41,7 @@ class CalendarWeekDay{
 
         if($date === $active_date)
         {
-            $html[] = '';
+            $html[] = '<a href=""></a>';
         }else
         {
             $html[] = '';
