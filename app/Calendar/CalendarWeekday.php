@@ -40,8 +40,8 @@ class CalendarWeekDay{
         $active_date = Task::where("active_date");
 
         if($date === $active_date)
-        {
-            $html[] = '<a href=""></a>';
+        {              
+            $html[] = '<a href="next/tasks/{id}"></a>';
         }else
         {
             $html[] = '';
