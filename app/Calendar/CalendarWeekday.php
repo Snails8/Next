@@ -49,7 +49,7 @@ class CalendarWeekDay{
         if($active_date)
         {
             $html[] = '<p class="title">' . $active_date->title. '</p>';
-            $html[] = '<a href="next/tasks/{id}"></a>';
+            $html[] = '<a href="next/tasks/{task::active_date}"></a>';
         }
 
         return implode("", $html);
