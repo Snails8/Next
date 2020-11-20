@@ -44,11 +44,11 @@ class CalendarWeekDay{
         //active_dateと比較するために日付を取得(Y-m-d)
         $date = $this->carbon->format("Y-m-d");
         //日付が一致した場合、ある日のデータを取り出す
-        $active_date = Task::where("active_date", "=", $date);
+        $active_date = Task::where("active_date", "=", $date)->get();
 
         if($active_date)
         {
-            $html[] = '<p class="title">' . e($active_date->title) . '</p>';
+            $html[] = '<p class="title">' . $active_date->title. '</p>';
             $html[] = '<a href="next/tasks/{id}"></a>';
         }
 
