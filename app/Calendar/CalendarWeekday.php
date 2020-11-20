@@ -24,6 +24,13 @@ class CalendarWeekDay{
         //小文字に変換をしているので、日曜日はday-sun、月曜日はday-monというクラス名を出力できる。
         return "day-" . strtolower($this->carbon->format("D"));
     }
+    /**
+     * active_dateを比較するために日付を取得(Y-m-d)
+     */
+    public function getdateKey()
+    {
+        return $this->carbon->format("Y-m-d");
+    }
 
     /**
      * @return
@@ -31,11 +38,8 @@ class CalendarWeekDay{
     public function render()
     {
         $html = [];
-        //active_dateを比較するために日付を取得(Y-m-d)
-        $date = $this->carbon->format("Y-m-d");
         //日付：format()関数に「j」を指定すると先頭にゼロをつけない日付けを取得できる
         $html[] = '<p class="day">' . $this->carbon->format("j"). '</p>';
-        $html[] = '<a href="/next/tasks/1">ココ！</a>';
         //日付が一致した場合、ある日のデータを取り出す
         $active_date = Task::where("active_date", "=", $date);
 
@@ -49,4 +53,5 @@ class CalendarWeekDay{
 
         return implode("", $html);
     }
+
 }
