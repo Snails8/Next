@@ -40,8 +40,11 @@ class CalendarWeekDay{
         $html = [];
         //日付：format()関数に「j」を指定すると先頭にゼロをつけない日付けを取得できる
         $html[] = '<p class="day">' . $this->carbon->format("j"). '</p>';
+
+        //active_dateと比較するために日付を取得(Y-m-d)
+        $date = $this->carbon->format("Y-m-d");
         //日付が一致した場合、ある日のデータを取り出す
-        $active_date = Task::where("active_date", "=", getDateKey());
+        $active_date = Task::where("active_date", "=", $date);
 
         if($active_date)
         {
