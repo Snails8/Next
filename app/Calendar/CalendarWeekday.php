@@ -27,7 +27,7 @@ class CalendarWeekDay{
     /**
      * active_dateを比較するために日付を取得(Y-m-d)
      */
-    public function getdateKey()
+    public function getDateKey()
     {
         return $this->carbon->format("Y-m-d");
     }
@@ -41,14 +41,12 @@ class CalendarWeekDay{
         //日付：format()関数に「j」を指定すると先頭にゼロをつけない日付けを取得できる
         $html[] = '<p class="day">' . $this->carbon->format("j"). '</p>';
         //日付が一致した場合、ある日のデータを取り出す
-        $active_date = Task::where("active_date", "=", $date);
+        $active_date = Task::where("active_date", "=", getDateKey());
 
-        if($date === $active_date)
+        if($active_date)
         {
+            $html[] = '<p class="title">' . e($active_date->title) . '</p>';
             $html[] = '<a href="next/tasks/{id}"></a>';
-        }else
-        {
-            $html[] = '';
         }
 
         return implode("", $html);
