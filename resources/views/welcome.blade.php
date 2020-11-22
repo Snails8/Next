@@ -11,7 +11,9 @@
     <body>
        
         <div id="app">
-            <sample-component></sample-component>
+          <v-app>
+            <calendar-component></calendar-component>
+        </v-app>
         </div>
 
     <script src="{{ mix('/js/app.js') }}"></script>
