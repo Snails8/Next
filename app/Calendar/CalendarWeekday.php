@@ -46,6 +46,7 @@ class CalendarWeekDay{
         //日付が一致した場合、ある日のデータを取り出す
         $active_date = Task::where("active_date", "=", $date)->get();
 
+        //Dayにtitle,リンクを表示
         if($active_date)
         {
             $html[] = '<p class="title">' . $active_date->title. '</p>';
