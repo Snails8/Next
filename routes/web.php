@@ -21,4 +21,8 @@ Route::post('/next/create', [TaskCreateController::class, 'store'])->name("store
  * 詳細表示機能
  */
 Route::get('/next/tasks/{id}', [TaskController::class, 'show']);
-Route::get('/next/tasks/{id}/edit', [TaskController::class, 'edit']);
+
+/** SPA */
+Route::get('/{any}', function() {
+    return view('app');
+})->where('any', '.*');
