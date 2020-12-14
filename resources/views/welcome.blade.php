@@ -12,7 +12,7 @@
        
         <div id="app">
           <v-app>
-            <calendar-component></calendar-component>
+            <sample-component></sample-component>
         </v-app>
         </div>
 

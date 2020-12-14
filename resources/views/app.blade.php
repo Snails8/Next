@@ -9,8 +9,7 @@
 
     <title>{{ config('app.name') }}</title>
 
-    <!-- scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Roboto:400">
@@ -21,6 +20,10 @@
 </head>
 
 <body>
-<div id="app"></div>
+<div id="app">
+    <sample-component></sample-component>
+</div>
+<!-- scripts -->
+<script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 </html>

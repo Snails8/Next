@@ -16,7 +16,4 @@ const app = new Vue({
     components: {
         Sample
     }
-    Vuetify: new Vuetify({
-
-    }),
 });
