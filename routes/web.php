@@ -22,3 +22,6 @@ Route::post('/next/create', [TaskCreateController::class, 'store'])->name("store
  */
 Route::get('/next/tasks/{id}', [TaskController::class, 'show']);
 
+Route::get('/{any}', function() {
+    return view('app');
+})->where('any', '.*');
