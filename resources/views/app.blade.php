@@ -7,9 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name') }}</title>
-
-    
+    <title>Laravel</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Roboto:400">
@@ -20,10 +18,11 @@
 </head>
 
 <body>
-<div id="app">
-    <sample-component></sample-component>
-</div>
+    <div id="app">
+        <sample-component></sample-component>
+    </div>
+
 <!-- scripts -->
-<script src="{{ mix('js/app.js') }}" defer></script>
+<script src="{{ mix('/js/app.js') }}" defer></script>
 </body>
 </html>
