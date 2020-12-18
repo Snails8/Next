@@ -10,7 +10,7 @@
     </head>
     <body>
        
-        <div id="app">
+    <div id="app">
             <sample-component></sample-component>
         </div>
 
