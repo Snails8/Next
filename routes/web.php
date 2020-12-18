@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TaskCreateController;
 use App\Http\Controllers\CalendarController;
-use App\Http\Controllers\AppController;
 
-Route::get('/', [AppController::class, 'showApi']);
+Route::get('/', function(){
+    return view('welcome');
+});
 
 /**
  * カレンダー一覧表示
