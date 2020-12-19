@@ -7,10 +7,21 @@
                   coler="grey darken-2"
                   v-on="on"
                 >
+                  <span>{{type}}</span>
+                </v-btn>
+            </template>
 
-        <v-list>
-            <v-list-item @click="type"
-            
+            <v-list>
+                <v-list-item @click="type = 'day'">
+                  <v-list-item-title>Day</v-list-item-title>
+                </v-list-item>
+                <v-list-item @click="type = 'week'">
+                  <v-list-item-title>Week</v-list-item-title>
+                </v-list-item>
+                <v-list-item @click="type = 'month'">
+                  <v-list-item-title>Month</v-list-item-title>
+                </v-list-item>
+
         <v-sheet height="500">
             <v-calendar
               ref="calendar"
