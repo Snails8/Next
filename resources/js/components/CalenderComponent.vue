@@ -1,5 +1,16 @@
 <template>
     <div>
+        <v-memu bottom right>
+            <template v-slot:activator="{ on }">
+                <v-btn
+                  outlined
+                  coler="grey darken-2"
+                  v-on="on"
+                >
+
+        <v-list>
+            <v-list-item @click="type"
+            
         <v-sheet height="500">
             <v-calendar
               ref="calendar"
