@@ -21,17 +21,18 @@
                 <v-list-item @click="type = 'month'">
                   <v-list-item-title>Month</v-list-item-title>
                 </v-list-item>
+            </v-list>
 
         <v-sheet height="500">
             <v-calendar
               ref="calendar"
-              locale="ja"
+              locale="ja-jp"
               :type="type"
               :now="today"
               :value="today"
               :events="events"
-              color="primary">
-            </v-calendar>
+              color="primary"
+            ></v-calendar>
         </v-sheet>
     </div>
 </template>
@@ -39,19 +40,19 @@
 <script>
 export default {
   date: () => ({
-      today: '2020-11-20',
+      today: `2020-12-20`,
       type: 'month',
       datas:[],
       events: [
           {
               name: 'タスクある',
-              start: '2020-11-19',
-              end: '2020-11-01',
+              start: '2020-12-19',
+              end: '2020-12-01',
           },
           {
               name: 'Meeting',
-              start: '2020-11-1 09:00',
-              end: '2020-05-1 10:00',
+              start: '2020-12-1 09:00',
+              end: '2020-12-1 10:00',
           },
       ],
   }),

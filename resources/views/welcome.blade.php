@@ -14,7 +14,7 @@
             <v-app>
                 <calendar-component></calendar-component>
             </v-app>
-            <sample-component></sample-component>
+            
         </div>
 
     <script src="{{ mix('/js/app.js') }}"></script>
