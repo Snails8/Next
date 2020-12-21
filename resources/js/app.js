@@ -1,6 +1,7 @@
 import './bootstrap'
 import Vue from 'vue'
 import Sample from './components/Sample'
+import Calendar from './components/Calendar'
 import App from './App.vue'
 
 import VCalendar from 'v-calendar'
@@ -23,7 +24,9 @@ new Vue({
 const app = new Vue({
     el: '#app',
     components: {
-        Sample
+        Sample,
+        Calendar
+
     },
     vuetify: new Vuetify({
 
