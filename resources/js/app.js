@@ -1,10 +1,11 @@
 import './bootstrap'
-import Vue from 'vue'
+import Vue from 'vue';
+import VCalendar from 'v-calendar';
+
 import Sample from './components/Sample'
 import Calendar from './components/Calendar'
 import App from './App.vue'
 
-import VCalendar from 'v-calendar'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.js'
 import vuetifyMin from 'vuetify/dist/vuetify.min.js'
